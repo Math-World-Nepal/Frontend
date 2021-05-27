@@ -11,12 +11,13 @@ section h2{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    margin: 0 0 3rem 0;
 }
 section p{
-    font-size: .87rem;
     text-align: center;
     margin: 1rem;
     color: #3c3c3c;
+    overflow: hidden;
 }
 section button{
     display: block;
@@ -51,13 +52,11 @@ section.topical-courses {
 section.topical-courses .courses-image {
     width: 15rem;
     height: 23rem;
-    margin: -7rem auto 0 auto;
+    margin: 4rem auto -8rem auto;
 
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr;
     grid-gap: 1rem;
-
-    transform: translateY(8rem);
 }
 section.topical-courses .courses-image .card {
     font-size: .5rem;
@@ -87,13 +86,59 @@ section.topical-courses .courses-image .card ul{
 section.blogs{
     background-color: var(--bg-color-second);
 }
-
+section.blogs button{
+    width: 17rem;
+    background-color: var(--color-header);
+}
 
 .blog-card{
     margin: auto;
-    width: 20rem;
+    width: 17rem;
     height: 30rem;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 .5rem 1.5rem -0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.blog-card>img{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+.blog-card h4{
+    margin: .5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.blog-card p{
+    flex: 4rem 1 0;
+
+    margin: .5rem 1rem;
+    text-align: left;
+    font-size: .9em;
+}
+.blog-card .author-details{
+    height: 2rem;
+    margin: 1rem 0;
+
+    font-size: .76em;
+    color: #777;
+
+    display: grid;
+    grid-template: 1fr 1fr / 3rem auto;
+}
+.blog-card .author-details .profile-pic{
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+}
+.blog-card .author-details .author-name{
+    font-weight: bold;
+    color: var(--color-header);
+}
+.blog-card .author-details .publish-date{
+    font-weight: bold;
 }

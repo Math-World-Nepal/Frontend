@@ -7,6 +7,8 @@
     <title>Math World Nepal</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="nav-bar">
@@ -18,11 +20,11 @@
         </div>
         <nav>
             <ul>
-                <li>Courses</li>
-                <li>Blogs</li>
-                <li>Articles</li>
-                <li>About Us</li>
-                <li>Contact</li>
+                <li><a>Courses</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Articles</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About Us</a></li>
             </ul>
         </nav>
         <div id="account-login">
@@ -49,7 +51,8 @@
         <h2>Topical Courses</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vitae suscipit corporis possimus, quae necessitatibus nemo animi laboriosam, expedita sit dolor. Sunt, soluta ipsum mollitia amet fuga dolor asperiores quidem.</p>
         <button class="primary-button">Visit Courses</button>
-        <div class="courses-image">
+        <div class="courses-image"
+        data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500">
             <div class="card">
                 <img src="./images/placeholder-image.jpg" alt="">
                 <h6>Geometry</h6>
@@ -104,13 +107,14 @@
     <section class="blogs">
         <h2>Latest Blogs</h2>
         <div class="container">
-            <div class="blog-card">
+            <div class="blog-card" data-aos="fade-left">
                 <img src="images/placeholder-image.jpg" />
                 <h4>Heading/Title</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa corporis error officia aliquid vel numquam rerum. Quas hic iure veniam dolorum reiciendis architecto minima ipsum voluptates optio mollitia! Quaerat, dolore!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab fuga expedita eum explicabo obcaecati recusandae quas error, exercitationem hic incidunt eligendi, pariatur dolore cumque beatae, facere impedit officiis dolores temporibus!
+                Magnam reprehenderit doloribus provident beatae, aperiam dolorem ipsum corrupti explicabo officiis iste rerum, eos fugit accusamus deserunt sint excepturi distinctio aliquid veritatis iure ab ipsa quo molestiae vel. Sint, quia!</p>
                 <div class="author-details">
                     <img class="profile-pic" src="images/user-circle-icon.svg">
-                    <span class="author-name"><b>Name Surname</b> on</span>
+                    <span><b class="author-name">Name Surname</b> on</span>
                     <span class="publish-date">9 May, 2021</span>
                 </div>
             </div>
@@ -120,5 +124,9 @@
     <footer>
 
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
