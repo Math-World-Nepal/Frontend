@@ -5,6 +5,7 @@
 section{
     width: 100%;
     padding: 5rem 0;
+    overflow: hidden;
 }
 section h2{
     color: var(--color-header);
@@ -48,6 +49,7 @@ section.main img{
 
 section.topical-courses {
     background-color: var(--bg-color-second);
+    overflow: visible;
 }
 section.topical-courses .courses-image {
     width: 15rem;
