@@ -140,6 +140,6 @@ button.primary-button:hover, .button.primary-button:hover{
 button.disabled, .button.disabled{
     filter: saturate(.1);
 }
-.latest-blogs-container{
+.overflowY{
     overflow-y: auto;
 }
