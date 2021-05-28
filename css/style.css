@@ -140,3 +140,6 @@ button.primary-button:hover, .button.primary-button:hover{
 button.disabled, .button.disabled{
     filter: saturate(.1);
 }
+.overflowY{
+    overflow-y: auto;
+}
