@@ -26,6 +26,7 @@ section button{
 }
 section.main{
     height: 100vh;
+    min-height: 40rem;
     text-align: center;
     color: var(--color-header);
     clip-path: ellipse(100vmax 100% at 50% 0%);
@@ -44,7 +45,7 @@ section.main header p{
     margin: 1rem 2rem 2rem 2rem;
 }
 section.main img{
-    max-width: 100%;
+    max-width: 100vmin;
 }
 
 section.topical-courses {
