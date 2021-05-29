@@ -27,6 +27,10 @@ body{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 #nav-bar>*{
     margin-right: 1rem;
@@ -37,6 +41,7 @@ body{
 #nav-bar .logo{
     max-height: 100%;
     margin-right: auto;
+    cursor: pointer;
 }
 #nav-bar .logo img{
     height: 100%;
@@ -82,6 +87,9 @@ body{
     background: #ffffff65;
 }
 
+#account-login{
+    cursor: pointer;
+}
 #account-login::before{
     content: "";
     width: 2rem;
@@ -91,8 +99,11 @@ body{
     background-position: center;
     background-size: contain;
 }
-#account-login button{
+#account-login>*{
     display: none;
+}
+#nav-bar .icon{
+    cursor: pointer;
 }
 
 
@@ -121,6 +132,8 @@ i.icon.search-icon{
 i.icon.hamburger-icon {
     background-image: url(../images/hamburger-icon.svg)
 }
+
+
 /* Buttons  */
 button, .button{
     font: inherit;
@@ -128,11 +141,11 @@ button, .button{
     padding: .5em;
     border: unset;
     border-radius: .3rem;
+    cursor: pointer;
 }
 button.primary-button, .button.primary-button{
     color: white;
     background-color: var(--color-accent);
-    cursor: pointer;
 }
 button.primary-button:hover, .button.primary-button:hover{
     filter: brightness(.95);
