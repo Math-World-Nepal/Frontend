@@ -39,18 +39,30 @@ body{
     margin-right: 0;
 }
 #nav-bar .logo{
-    max-height: 100%;
+    height: 100%;
     margin-right: auto;
     cursor: pointer;
 }
 #nav-bar .logo img{
     height: 100%;
-    max-height: 3rem;
 }
 #nav-bar .search-bar input{
     display: none;
+    background-color: #E7EBF1;
+    height: 1.7rem;
+    width: 100%;
+    border: unset;
+    padding: 0 .5em;
+    font: inherit;
 }
-
+#nav-bar .search-bar .icon{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+}
+#nav-bar .search-bar input::placeholder{
+    color: var(--color-header);
+}
 
 #nav-bar nav{
     margin: 3rem 0 0 0;
@@ -99,8 +111,9 @@ body{
     background-position: center;
     background-size: contain;
 }
-#account-login>*{
+#account-login>button{
     display: none;
+    padding: .2em .5em;
 }
 #nav-bar .icon{
     cursor: pointer;
@@ -143,6 +156,10 @@ button, .button{
     border-radius: .3rem;
     cursor: pointer;
 }
+button.disabled, .button.disabled{
+    filter: saturate(.1);
+}
+
 button.primary-button, .button.primary-button{
     color: white;
     background-color: var(--color-accent);
@@ -150,9 +167,100 @@ button.primary-button, .button.primary-button{
 button.primary-button:hover, .button.primary-button:hover{
     filter: brightness(.95);
 }
-button.disabled, .button.disabled{
-    filter: saturate(.1);
+
+button.secondary-button, .button.secondary-button{
+    color: var(--color-accent);
+    background: transparent;
 }
-.overflowY{
-    overflow-y: auto;
+button.secondary-button:hover, .button.secondary-button:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 425px){
+#nav-bar .search-bar{
+    flex: 1 0 6rem;
+    max-width: 12rem;
+    position: relative;
+}
+#nav-bar .search-bar input{
+    display: unset;
+}
+#nav-bar .search-bar .icon{
+    height: 1.5rem;
+    position: absolute;
+    top: .1rem;
+    right: 0;
+}
+}
+
+@media screen and (min-width: 780px) {
+
+#nav-bar {
+    height: 5rem;
+    font-size: .9rem;
+
+    justify-content: space-between;
+}
+#nav-bar .logo{
+    max-height: 100%;
+    margin-right: .5rem;
+}
+#nav-bar .logo img{
+    height: 100%;
+}
+
+
+#nav-bar nav{
+    margin: 0 1rem;
+    display: block;
+    position: static;
+    width: unset;
+    height: unset;
+    z-index: 0;
+    background-color: transparent;
+    opacity: 1;
+}
+#nav-bar nav ul{
+    width: unset;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-bar nav ul li{
+    width: unset;
+    height: unset;
+    line-height: unset;
+    text-align: left;
+    margin: 0 .5rem;
+}
+#nav-bar nav ul li a{
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+#nav-bar nav ul li a:hover{
+    background: transparent;
+    text-decoration: underline;
+}
+
+#account-login{
+    cursor: default;
+}
+#account-login::before{
+    display: none;
+}
+#account-login>button{
+    display: unset;
+}
+#nav-bar .icon.hamburger-icon{
+    display: none;
+}
+
+}
+
+@media screen and (min-width: 930px) {
+    #nav-bar {
+        padding: 0 10vw;
+    }
 }

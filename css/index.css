@@ -23,7 +23,6 @@ section button{
 section.main{
     height: 100vh;
     min-height: 40rem;
-    text-align: center;
     color: var(--color-header);
     clip-path: ellipse(100vmax 100% at 50% 0%);
 
@@ -34,14 +33,21 @@ section.main{
 }
 section.main header .title-text{
     font-size: 2rem;
+    text-align: center;
 }
 section.main header p{
-    line-height: normal;
+    color: var(--color-header);
     font-size: 1.2rem;
     margin: 1rem 2rem 2rem 2rem;
 }
+section.main button{
+    display: none;
+}
 section.main img{
-    max-width: 100vmin;
+    display: block;
+    margin: auto;
+    width: 100vmin;
+    max-width: 35rem;
 }
 
 section.topical-courses {
@@ -72,13 +78,12 @@ section.topical-courses .courses-image .card h6{
     color: #000;
     font-size: .7rem;
     font-weight: bold;
-    margin: .2rem .5rem;
+    margin: 0 .5rem;
 }
 section.topical-courses .courses-image .card ul{
     color: black;
     list-style-position: inside;
-    list-style-type:disc;
-    padding: .2rem;
+    list-style-type: disc;
     margin-left: .5rem;
 }
 
@@ -140,4 +145,87 @@ section.blogs button{
 }
 .blog-card .author-details .publish-date{
     font-weight: bold;
+}
+
+@media screen and (min-width: 770px) {
+section{
+    padding: 7rem 10vw;
+}
+section>h2{
+    color: var(--color-header);
+    font-size: 2rem;
+    text-align: left;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+section>p{
+    text-align: left;
+    margin: 0rem;
+    width: 50%;
+}
+section button{
+    display: block;
+    margin: 3rem 0;
+}
+section.main{
+    display: grid;
+    grid-template: 1fr 1fr/ 60%;
+    margin-right: 0;
+    position: relative;
+}
+section.main header{
+    align-self: center;
+}
+section.main header .title-text{
+    text-align: left;
+    font-size: 3.5rem;
+    margin-top: 5rem;
+}
+section.main header p{
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 0;
+}
+section.main button{
+    display: unset;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+section.main img{
+    position: absolute;
+    z-index: -1;
+    bottom: 2rem;
+    right: 0;
+    width: 45%;
+}
+
+section.topical-courses .courses-image {
+    width: 18rem;
+    height: 27rem;
+    margin: -15rem 0 -12rem auto;
+}
+section.topical-courses .courses-image .card {
+    font-size: .65rem;
+}
+section.topical-courses .courses-image .card img {
+    width: 100%;
+}
+section.topical-courses .courses-image .card h6{
+    font-size: .8rem;
+}
+
+
+section.video-lectures>h2, section.video-lectures>p{
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
+section.blogs{
+    background-color: var(--bg-color-second);
+}
+section.blogs button{
+    width: 100%;
+}
+
 }
