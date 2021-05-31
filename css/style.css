@@ -64,9 +64,13 @@ body{
     color: var(--color-header);
 }
 
+#nav-bar nav.hidden{
+    clip-path: circle(0 at 90% -1rem);
+}
 #nav-bar nav{
+    display: block;
+    clip-path: circle(110vh at 90% -1rem);
     margin: 3rem 0 0 0;
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -75,6 +79,7 @@ body{
     z-index: 5;
     background-color: #dedede;
     opacity: .9;
+    transition: clip-path .1s ease-in-out;
 }
 #nav-bar nav ul{
     width: 100%;
@@ -143,7 +148,10 @@ i.icon.search-icon{
     background-image: url(../images/search-icon.svg);
 }
 i.icon.hamburger-icon {
-    background-image: url(../images/hamburger-icon.svg)
+    background-image: url(../images/hamburger-icon.svg);
+}
+i.icon.hamburger-icon.active { /*image changes to cross when active*/
+    background-image: url(../images/close_big.svg);
 }
 
 
@@ -210,9 +218,12 @@ button.secondary-button:hover, .button.secondary-button:hover{
 }
 
 
+#nav-bar nav.hidden{
+    clip-path: unset;
+}
 #nav-bar nav{
     margin: 0 1rem;
-    display: block;
+    clip-path: unset;
     position: static;
     width: unset;
     height: unset;
