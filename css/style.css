@@ -23,12 +23,14 @@ body{
     height: 3rem;
     padding: 0 1rem;
     border-bottom: 1px solid #DEDEDE;
+    background-color: #fafafabb;
+    backdrop-filter: blur(4px);
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1;
 }
