@@ -28,7 +28,6 @@
         }
     }
 })();
-
 (function hideNavOnScroll(){
     const navBar = document.getElementById("nav-bar");
     var top = 0;
