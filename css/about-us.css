@@ -1,0 +1,87 @@
+body>section{
+    padding: 5rem 1rem;
+    text-align: center;
+}
+h1 {
+   font-size: 2.25rem;
+   color: var(--color-header);
+   margin-bottom: 2rem;
+}
+section.hero>img{
+    max-width: 100%;
+}
+hr{
+    border-top: .2rem solid #000;
+    margin: 0 1rem;
+    height: 0;
+}
+
+section.team-members > .container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.team-member-card{
+    flex: 0 0 12.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+    margin: 1rem;
+}
+.team-member-card>.member-pic{
+    width: 10rem;
+    height: 10rem;
+    max-width: 10rem;
+    background-color: #FABC21;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.team-member-card>.member-pic>img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.team-member-card>.member-name{
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+.team-member-card>.member-role{
+    color: #606060;
+}
+
+
+@media screen and (min-width: 770px) {
+body>section{
+    padding: 5rem 10vw;
+    text-align: left;
+}
+h1 {
+    font-size: 3rem;
+}
+section.hero{
+    position: relative;
+    min-height: 90vh;
+    display: grid;
+    grid: 1fr 2fr / 1fr 1fr;
+}
+section.hero>h1{
+    align-self: flex-end;
+}
+section.hero>p{
+    font-size: 1.2rem;
+}
+section.hero>img{
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
+    align-self: center;
+    width: 100%;
+}
+hr{
+    margin: 0 10vw;
+}
+
+}
