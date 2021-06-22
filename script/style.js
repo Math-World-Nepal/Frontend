@@ -28,3 +28,25 @@
         }
     }
 })();
+(function hideNavOnScroll(){
+    const navBar = document.getElementById("nav-bar");
+    var top = 0;
+    var diff;
+    var prevYOffset = 0;
+    var currYOffset;
+    window.addEventListener("scroll", function(e){
+        currYOffset = window.pageYOffset;
+        diff = currYOffset - prevYOffset;
+        prevYOffset = currYOffset;
+        top -= diff;
+        if(top > 0) {
+            top = 0;
+        } else{
+            let height = navBar.offsetHeight;
+            if(top < - height){
+                top = -height;
+            }
+        } 
+        navBar.style.top = top + "px";
+    })
+})();
