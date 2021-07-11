@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+    <script src="/script/style.js" defer></script>
+
+    <style>
+        main{
+            padding-top: 7rem;
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 1rem;
+        }
+        .blog-card{
+            background: #f0f0f0;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: #000 0 .5rem 1rem -.5rem;
+            max-height: 80vh;
+        }
+        .blog-card > img{
+            flex: 0 0 4rem;
+            object-fit: cover;
+        }
+        .blog-card > .content {
+            padding: 1rem;
+            display: grid;
+            grid-template-rows: 4rem auto 2rem;
+            justify-items: stretch;
+        }
+        .blog-card > .content > h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--color-header);
+        }
+        .blog-card > .content > p {
+            height: auto;
+            overflow: hidden;
+        }
+        .blog-card > .content > footer {
+            font-size: .8em;
+            color: #3c3c3c;
+        }
+        .blog-card > .content > footer > address {
+            display: inline;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-bar">
+        <span class="logo">
+            <img src="/images/logo.png" alt="logo" />
+        </span>
+
+        <nav class="hidden">
+            <ul>
+                <li><a>Courses</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Articles</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" name="search-value" placeholder="Search">
+            <img src="/images/search-icon.svg" alt="search-icon" class="icon search-icon" />
+        </div>
+        <div id="account-login">
+            <button class="secondary-button">Login</button>
+            <button class="primary-button">Sign Up</button>
+        </div>
+        <i class="icon hamburger-icon"></i>
+    </div>
+    <main>
+        <article class="blog-card full-width">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <div class="content">
+                <h3 class="heading">Could we survive in earth if it spun twice a fast?</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt.
+                Est sed nihil, corrupti perspiciatis natus consectetur nostrum, autem ipsam a, delectus eius quae ab? Optio molestias rem dolores inventore, provident dolorum. Consequuntur reprehenderit dicta nesciunt. Magnam voluptatibus fugit iste!</p>
+                <footer class="author">
+                    <address>Aditya Karki</address>
+                    <span>on</span>
+                    <time datetime="2021-05-21">May 21, 2021</time>
+                </footer>
+            </div>
+        </article>
+        <article class="blog-card full-width">
+            <div class="image-container">
+                <img src="/images/placeholder-image.jpg" alt="">
+            </div>
+            <h3 class="heading">Why is everything around us circular?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ...</p>
+            <div class="author">
+                <address>Amit Choudhary</address>
+                <span>on</span>
+                <time datetime="2021-06-15">June 15, 2021</time>
+            </div>
+        </article>
+        <article class="blog-card full-width">
+            <div class="image-container"></div>
+            <h3 class="heading"></h3>
+            <p></p>
+            <div class="author"></div>
+        </article>
+        <article class="blog-card full-width">
+            <div class="image-container"></div>
+            <h3 class="heading"></h3>
+            <p></p>
+            <div class="author"></div>
+        </article>
+        <article class="blog-card full-width">
+            <div class="image-container"></div>
+            <h3 class="heading"></h3>
+            <p></p>
+            <div class="author"></div>
+        </article>
+        <article class="blog-card full-width">
+            <div class="image-container"></div>
+            <h3 class="heading"></h3>
+            <p></p>
+            <div class="author"></div>
+        </article>
+    </main>
+</body>
+</html>
