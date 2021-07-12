@@ -12,50 +12,91 @@
 
     <style>
         main{
-            padding-top: 7rem;
+            padding: 5rem 1rem;
             display: flex;
             flex-flow: row wrap;
-            margin: 0 1rem;
+            justify-content: flex-start;
         }
         .blog-card{
+            flex:1 0 16rem;
             background: #f0f0f0;
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: #000 0 .5rem 1rem -.5rem;
-            max-height: 80vh;
+            box-shadow: #000 0 0 1rem -.5rem;
+            font-size: .9rem;
+            margin: 1rem;
+
             display: grid;
             grid: 
-                'image' 1fr
-                'heading' 4rem
+                'image' 15rem
+                'heading' auto
                 'paragraph' 1fr
-                'footer' 2rem
+                'footer' auto
                 / 100%
             ;
             justify-items: stretch;
             align-items: stretch;
         }
+        .blog-card>*{
+            padding: .5rem 1rem;
+        }
         .blog-card > img{
+            grid-area: image;
+            padding: 0;
             object-fit: cover;
         }
 
         .blog-card > h3 {
-            font-size: 1.2em;
+            grid-area: heading;
+            font-size: 1.3em;
             font-weight: bold;
             color: var(--color-header);
         }
         .blog-card > p {
+            grid-area: paragraph;
             height: auto;
-            overflow: hidden;
         }
         .blog-card > footer {
+            grid-area: footer;
             font-size: .8em;
             color: #3c3c3c;
+            margin-bottom: .5rem;
         }
         .blog-card > footer > address {
             display: inline;
             text-decoration: none;
             font-style: normal;
             font-weight: bold;
+        }
+
+        @media screen and (min-width: 650px) {
+            .blog-card.full-width {
+                grid: 
+                'image heading' auto
+                'image paragraph' 1fr
+                'image footer' auto
+                / 50% 50%
+                ;
+                flex: 1 0 90%;
+            }
+            .blog-card.full-width:nth-child(2n){
+                grid-template-areas: 
+                'heading image'
+                'paragraph image'
+                'footer image'
+                ;
+            }
+        }
+        @media screen and (min-width: 780px) {
+            main {
+                padding-top: 7rem;
+            }
+        }
+        @media screen and (min-width: 930px) {
+            main {
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
         }
     </style>
 </head>
@@ -87,15 +128,77 @@
     <main>
         <article class="blog-card full-width">
             <img src="/images/placeholder-image.jpg" alt="">
-            <h3>Could we survive in earth if it spun twice a fast?</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt.
-            Est sed nihil, corrupti perspiciatis natus consectetur nostrum, autem ipsam a, delectus eius quae ab? Optio molestias rem dolores inventore, provident dolorum. Consequuntur reprehenderit dicta nesciunt. Magnam voluptatibus fugit iste!</p>
+            <h3>Could we survive in earth if it spun twice as fast?</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt...</p>
             <footer class="author">
                 <address>Aditya Karki</address>
                 <span>on</span>
                 <time datetime="2021-05-21">May 21, 2021</time>
             </footer>
-            
+        </article>
+        <article class="blog-card full-width">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt...</p>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
+        </article>
+        <article class="blog-card">
+            <img src="/images/placeholder-image.jpg" alt="">
+            <h3>Why is everything around us circular?</h3>
+            <footer class="author">
+                <address>Amit Chauthary</address>
+                <span>on</span>
+                <time datetime="2020-06-16">June 16, 2020</time>
+            </footer>
         </article>
     </main>
 </body>
