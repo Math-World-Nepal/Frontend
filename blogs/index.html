@@ -20,15 +20,15 @@
         .blog-card{
             flex:1 0 16rem;
             background: #f0f0f0;
-            border-radius: 1rem;
+            border-radius: .5rem;
             overflow: hidden;
-            box-shadow: #000 0 0 1rem -.5rem;
+            box-shadow: #000 0 0 .5rem -0.2rem;
             font-size: .9rem;
             margin: 1rem;
 
             display: grid;
             grid: 
-                'image' 15rem
+                'thumbnail' 15rem
                 'heading' auto
                 'paragraph' 1fr
                 'footer' auto
@@ -41,12 +41,12 @@
         .blog-card>*{
             padding: .5rem 1rem;
         }
-        .blog-card > .image{
-            grid-area: image;
+        .blog-card > .thumbnail{
+            grid-area: thumbnail;
             padding: 0;
             overflow: hidden;
         }
-        .blog-card > .image > img {
+        .blog-card > .thumbnail img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -77,27 +77,27 @@
         }
 
         .blog-card:hover {
-            box-shadow: #000 0 0 1.5rem -.5rem;
+            box-shadow: #000 0 0 .7rem -.2rem;
         }
-        .blog-card:hover > .image > img{
-            transform: scale(1.2);
+        .blog-card > .thumbnail img:hover{
+            transform: scale(1.1);
         }
 
         @media screen and (min-width: 650px) {
             .blog-card.full-width {
                 grid: 
-                'image heading' auto
-                'image paragraph' 1fr
-                'image footer' auto
+                'thumbnail heading' auto
+                'thumbnail paragraph' 1fr
+                'thumbnail footer' auto
                 / 50% 50%
                 ;
                 flex: 1 0 90%;
             }
             .blog-card.full-width:nth-child(2n){
                 grid-template-areas: 
-                'heading image'
-                'paragraph image'
-                'footer image'
+                'heading thumbnail'
+                'paragraph thumbnail'
+                'footer thumbnail'
                 ;
             }
         }
@@ -141,8 +141,8 @@
     </div>
     <main>
         <article class="blog-card full-width">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Could we survive in earth if it spun twice as fast?</h3>
+            <div class="thumbnail"><a><img src="/images/blog-1.png" alt=""></a></div>
+            <h3><a>Could we survive in earth if it spun twice as fast?</a></h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt...</p>
             <footer class="author">
                 <address>Aditya Karki</address>
@@ -151,8 +151,8 @@
             </footer>
         </article>
         <article class="blog-card full-width">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/blog-2.png" alt=""></a></div>
+            <h3><a>Why is everything around us circular?</a></h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, autem accusamus ea nobis praesentium illum maxime consectetur sint assumenda nam saepe possimus. Animi id ex harum, doloremque qui maxime sunt...</p>
             <footer class="author">
                 <address>Amit Chauthary</address>
@@ -161,8 +161,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/blog-3.png" alt=""></a></div>
+            <h3><a>Importance of Data Science in daily life.</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>
@@ -170,8 +170,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/Image-2 2.png" alt=""></a></div>
+            <h3><a>Gravity defined features that affect everyone of us.</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>
@@ -179,8 +179,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/Image 1.png" alt=""></a></div>
+            <h3><a>Are there a couple of universes?</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>
@@ -188,8 +188,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/Image 1 (1).png" alt=""></a></div>
+            <h3><a>Measuring the circumference of the earth More than 2,000 years ago</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>
@@ -197,8 +197,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/placeholder-image.jpg" alt=""></a></div>
+            <h3><a>Why is everything around us circular?</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>
@@ -206,8 +206,8 @@
             </footer>
         </article>
         <article class="blog-card">
-            <div class="image"><img src="/images/placeholder-image.jpg" alt=""></div>
-            <h3>Why is everything around us circular?</h3>
+            <div class="thumbnail"><a><img src="/images/placeholder-image.jpg" alt=""></a></div>
+            <h3><a>Why is everything around us circular?</a></h3>
             <footer class="author">
                 <address>Amit Chauthary</address>
                 <span>on</span>

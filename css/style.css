@@ -277,3 +277,9 @@ button.secondary-button:hover, .button.secondary-button:hover{
         padding: 0 10vw;
     }
 }
+
+
+/* styling links <a> tag*/
+a {
+    cursor: pointer;
+}
