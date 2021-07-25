@@ -26,10 +26,9 @@ section.main{
     color: var(--color-header);
     clip-path: ellipse(100vmax 100% at 50% 0%);
 
-    background-image:url(../images/background.png);
+    background-image:url(../images/background.svg);
     background-repeat: no-repeat;
-    background-size: 100% 80%;
-    background-position: 100% 130%;
+    background-size: cover;
 }
 section.main header .title-text{
     font-size: 2rem;
