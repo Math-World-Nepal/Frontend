@@ -186,6 +186,88 @@ button.secondary-button:hover, .button.secondary-button:hover{
     text-decoration: underline;
 }
 
+
+/* footer  */
+.page-footer {
+    display: grid;
+    grid: 
+    'logo report' 2rem
+    'logo nav' 2rem
+    'copyright copyright' 2rem
+    / 4rem auto
+    ;
+    align-items: center;
+
+    padding: 1rem;
+    background-color: white;
+    font-size: 0.8rem;
+}
+.page-footer> .logo {
+    grid-area: logo;
+}
+.page-footer> .logo > img {
+    width: 100%;
+}
+.page-footer> .report-message {
+    grid-area: report;
+    color: #818181;
+}
+.page-footer > .report-message a{
+    color: #363636;
+    text-decoration: underline;
+}
+
+.page-footer> nav {
+    grid-area: nav;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.page-footer> nav > ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-footer .page-links{
+    flex-basis: 20rem;
+    margin-right: 2rem;
+}
+.page-footer .social-links {
+    flex-basis: 12rem;
+}
+
+.social-links .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+}
+.icon.facebook {
+    object-position: 0% 0%;
+}
+.icon.discord {
+    object-position: 25% 0%;
+}
+.icon.youtube {
+    object-position: 50% 0%;
+}
+.icon.instagram {
+    object-position: 75% 0%;
+}
+.icon.linkedin {
+    object-position: 100% 0%;
+}
+
+.page-footer> .copyright-text {
+    grid-area: copyright;
+    text-align: center;
+
+    color: #808080;
+}
+
+
+
 @media screen and (min-width: 425px){
 #nav-bar .search-bar{
     flex: 1 0 6rem;
@@ -270,6 +352,14 @@ button.secondary-button:hover, .button.secondary-button:hover{
     display: none;
 }
 
+.page-footer {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.page-footer .social-links .icon{
+    width: 2rem;
+    height: 2rem;
+}
 }
 
 @media screen and (min-width: 930px) {
