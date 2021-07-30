@@ -15,7 +15,7 @@ article.main {
 article q {
     font-style: italic;
 }
-article p {
+.article-content p {
     margin: 1em 0;
     line-height: 1.8em;
     max-width: 60ch;
@@ -34,7 +34,7 @@ article ul, article ol {
     margin: 1em auto;
 }
 
-article header {
+article.main header {
     margin-bottom: 2rem;
 }
 
@@ -54,7 +54,6 @@ img {
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: #000 0 0 .5rem -0.2rem;
-    font-size: .9rem;
 
     display: grid;
     grid: 
@@ -85,7 +84,10 @@ img {
     object-fit: cover;
     transition: .5s ease;
 }
-
+.blog-card a {
+    text-decoration: none;
+    color: unset;
+}    
 .blog-card > h3 {
     grid-area: heading;
     font-size: 1.3em;
