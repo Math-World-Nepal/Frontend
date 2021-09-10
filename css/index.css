@@ -72,24 +72,25 @@ section.topical-courses a:hover {
   grid-template: 1fr 1fr/ 1fr 1fr;
   grid-gap: 1rem;
 }
-.courses-image .card {
+.card {
   font-size: 0.5rem;
   background-color: var(--bg-color-second);
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 2rem -1rem;
+  height: 100%;
 }
-.courses-image .card img {
+.card img {
   width: 100%;
 }
-.courses-image .card h6 {
+.card h6 {
   color: #000;
   font-size: 0.7rem;
   font-weight: bold;
   margin: 0 0.5rem;
 }
-.courses-image .card ul {
+.card ul {
   color: black;
   list-style-position: inside;
   list-style-type: disc;
@@ -98,16 +99,34 @@ section.topical-courses a:hover {
 
 section.recent {
   overflow: visible;
-  padding-bottom: 0;
+}
+.recent-image {
+  width: 18rem;
+  height: 20rem;
+  margin: 4rem auto -20rem auto;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 1rem;
+}
+.variant-card {
+  height: 39%;
+  font-size: 0.5rem;
+  background-color: var(--bg-color-second);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 2rem -1rem;
 }
 
-.card-second-variant {
-  height: 34rem;
-  width: 25rem;
-  /* display: flex;
-  flex-direction: row;
-  margin-bottom: 0; */
-  /* yet left to be defined properly */
+.variant-card img,
+.variant-card embed {
+  width: 100%;
+}
+.variant-card h6 {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0 0.5rem;
 }
 section.blogs {
   background-color: var(--bg-color-second);
@@ -229,13 +248,13 @@ section.blogs button {
     margin: -20rem 0 -12rem auto;
   }
 
-  .courses-image .card {
+  .card {
     font-size: 0.65rem;
   }
-  .courses-image .card img {
+  .card img {
     width: 100%;
   }
-  .courses-image .card h6 {
+  .card h6 {
     font-size: 0.8rem;
   }
   .recent p,
@@ -243,8 +262,18 @@ section.blogs button {
   .recent button {
     margin-left: auto;
   }
-  .card-second-variant {
-    margin: -10rem auto -16rem 0;
+  .variant-card {
+    height: 46%;
+  }
+  .recent-image {
+    margin: -20rem auto -12rem 0;
+    width: 18rem;
+    height: 27rem;
+    flex-direction: column;
+  }
+
+  .recent-image h6 {
+    font-size: 0.9rem;
   }
 
   section.video-lectures > h2,
