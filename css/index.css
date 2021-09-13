@@ -49,16 +49,9 @@ section.main img {
   max-width: 35rem;
 }
 
-section.video-introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-introduction img {
-  width: 60%;
-  height: 40%;
+.video-introduction > iframe {
+  width: 100%;
+  height: min(90vh, 56vw);
 }
 
 section.topical-courses {
