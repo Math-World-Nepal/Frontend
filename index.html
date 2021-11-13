@@ -62,7 +62,16 @@
       />
     </section>
     <section class="video-introduction">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DUbqVBnKoKA/?controls=1&enablejsapi=1&modestbranding=1&showinfo=0&iv_load_policy=3&html5=1&fs=1&rel=0&hl=en&cc_lang_pref=en&cc_load_policy=0&start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe
+        data-aos="flip-left"
+        data-aos-easing="ease-out"
+        data-aos-duration="500"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/DUbqVBnKoKA?rel=0&amp;autoplay=1&mute=0&controls=0&loop=1&list=PLG8EmCEgd5zhfvhFjQzDgYn1SlcWDyLEm"
+      >
+      </iframe>
+      <button class="primary-button">Learn More About Us</button>
     </section>
     <section class="topical-courses">
       <h2>Topical Courses</h2>
@@ -154,11 +163,19 @@
         data-aos-easing="ease-out"
       >
         <div class="variant-card">
-          <embed src="./images/iymc-update.gif" alt="" />
+          <video autoplay loop muted>
+            <source src="./images/iymc-update.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
           <h6>Update about IYMC-2019</h6>
         </div>
         <div class="variant-card">
-          <img src="./images/elearning-module.gif" alt="" />
+          <video autoplay loop muted>
+            <source src="./images/elearning-module.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
           <h6>Project: E-learning Module</h6>
         </div>
       </div>
@@ -199,7 +216,7 @@
     </section>
     <footer class="page-footer">
       <span class="logo">
-        <img src="./images/footer-image.png" alt="logo" />
+        <img src="./images/logo.png" alt="logo" />
       </span>
       <span class="report-message"
         >Found problem in this page? <a>Report Us</a></span

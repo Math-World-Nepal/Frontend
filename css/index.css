@@ -49,9 +49,24 @@ section.main img {
   max-width: 35rem;
 }
 
+section.video-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/bg__with-dotted.svg");
+  /* background-repeat: no-repeat; */
+  /* background-position: bottom; */
+  background-size: contain;
+  /* background: url("/images/blue-diamond.svg"); */
+}
 .video-introduction > iframe {
   width: 100%;
   height: min(90vh, 56vw);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  border: 40px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
 }
 
 section.topical-courses {
@@ -124,7 +139,7 @@ section.recent {
 }
 
 .variant-card img,
-.variant-card embed {
+.variant-card video {
   width: 100%;
 }
 .variant-card h6 {
